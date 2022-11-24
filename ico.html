@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="./bulma/css/bulma.min.css">
+   <link rel="icon" type="image/png" href="./img/krypton-gradient.svg">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Krypton project</title>
+</head>
+<body>
+     
+  <!-- Start navbar -->
+  <nav class="navbar is-darkest "id="navbar1" role="navigation" aria-label="main navigation">
+    <div class="container">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="https://bulma.io">
+          <img src="./img/krypton.svg"class="rotate-img navbar-brand-img "id="navbar-brand-img" width="112" height="28">
+          <span class="brand-name is-size-4  is-uppercase has-text-white">Krypton</span>
+        </a>
+        <a role="button" class="navbar-burger has-text-white" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-end">
+          <a class="navbar-item has-text-white is-size-7" href="token.html">
+            TOKEN
+          </a>
+          <a class="navbar-item has-text-white is-size-7" href="ico.html">
+            ICO
+          </a>
+          <a class="navbar-item has-text-white is-size-7" href="roadmap.html">
+            ROADMAP
+          </a>
+          <a class="navbar-item has-text-white is-size-7" href="blog.html">
+            MEDIA
+          </a>
+          <a class="navbar-item has-text-white is-size-7" href="#pricing">
+            <img src="./img/telegram.svg "width="10px">  TELEGRAM
+          </a>
+       
+          <div class="navbar-item">
+            <div class="buttons">
+              <a class="button register  border-none has-gradient ">
+                <strong class="mystrong has-text-white is-size-7 is-uppercase py-4">Register</strong>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!-- End of navbar -->
+    <!-- end navbar  -->
+    <!-- start login  -->
+  <section class="section  is-darkest is-vcentered is-medium ">
+  
+  <div class="container is-centered">
+    <div class="columns is-vcentered">
+          <div class="column is-5 landing-caption"> 
+          <h1 class="title is-size-3 has-text-white"> Login to ICO</h1>
+
+            <form class="form">
+              <!-- <label for="">name</label> -->
+              <!-- <input class="material-input mt-6 inputText" type="text" name=""placeholder="" id=""> -->
+              <input type="text" class="inputText  " required/>
+              <span class="float-name"id="float-name">Name</span>
+              <span class="material-highlight"></span>
+              <span class="bar"></span>
+              <input type="text" class="inputText1 myemail " required/>
+              <span class=" float-email  "id="float-email">Email</span>
+              <span class="material-highlight"></span>
+              <span class="bar1"></span>
+              <!-- <span class="bar"></span> -->
+              <!-- <span class="floating-label">Your email address</span> -->
+              <!-- <label for=""class="label">email</label> -->
+              <!-- <input class="material-input mt-6 inputText" type="email" placeholder="" id=""> -->
+              <span class="bar"></span>
+              <textarea name="message" class="material-input mt-6"id="" cols="20" rows="10"placeholder=""></textarea>
+              <div class="buttons is-centered" >
+                <button class="button   is-medium is-fullwidth mt-2 has-gradient has-text-white is-size-6 is-uppercase border-none py-2 px-2">login</button> </div>
+            </form>
+       
+          </div> 
+  
+        <div class="column is-5 is-offset-1 ico-countdown">
+          <div class="counter has-gradient p-6">
+              <!-- <div x-data="initCountdown()" x-init="setupCountdown()" class="ico-card animated preFadeInUp fadeInUp"> -->
+                <div class="count-init">
+                <!-- Countdown -->
+                  <ul id="countdown" class="is-ico">
+                      <li id="days">
+                          <div id="days-count" class="timer-number">00</div>
+                          <div class="label has-text-white">Days</div>
+                      </li>
+                      <li id="hours">
+                          <div id="hours-count" class="timer-number">00</div>
+                          <div class="label has-text-white">Hours</div>
+                      </li>
+                      <li id="minutes">
+                          <div id="minutes-count" class="timer-number">00</div>
+                          <div class="label has-text-white">Minutes</div>
+                      </li>
+                      <li id="seconds">
+                          <div id="seconds-count" class="timer-number">00</div>
+                          <div class="label has-text-white">Seconds</div>
+                      </li>
+                  </ul>
+                  <!-- Progress bar -->
+                  <div class="progress-block my-6 has-text-white">
+                      <!-- Tags -->
+                      <div class="progress-tags mb-4">
+                          <div class="progess-item">Presale</div>
+                          <div class="progess-item">Soft Cap</div>
+                          <div class="progess-item">Bonus</div>
+                      </div>
+                      <progress class="progress ico-progress is-primary" value="65" max="100">65%</progress>
+                  </div>
+                  <!-- Button -->
+                 <div class="buttons is-centered" >
+        <button class="button is-rounded mb-3 front-gradient has-text-white is-size-6 is-medium is-fullwidth ">register for ico</button>
+                 </div>
+                  <!-- Icons -->
+                  <div class="icons-block">
+                      <div class="icon-block has-text-white"> <i class="fa fa-btc"></i></div>
+                      <div class="icon-block ml-4 has-text-white"><i class="fa fa-circle"></i></div>
+                      <div class="icon-block ml-4 has-text-white"> <i class="fa fa-wordpress"></i></div>
+                  </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+  </section>
+  <!-- start footer  -->
+  <footer class="krypton-footer has-solar is-medium has-text-centered ">
+    <div class="container ">
+      <div class="footer-logo is-centered mt-6">
+        <img src="./img/krypton-gradient.svg"class="rotate-img"width="70px" alt="">
+        <h1 class="title has-text-white is-uppercase is-4">Krypton</h1>
+        <h4 class="subtitle is-family-sans-serif is-uppercase  has-text-info is-7 my-5">Blockchain brought to another level</h4>
+      </div>
+      <div class="footer-middel">
+  <div class="columns footer-columns is-vcentered  ">
+      <div class="column is-4">
+        <ul class="footer-link">
+          <li class="has-text-white">token</li>
+          <li class="has-text-white">ICO</li>
+          <li class="has-text-white">ROADMAP</li>
+        </ul>
+      </div>
+      <div class="column is-4">
+        <div class="buttons">
+          <input type="email"class="input-krypton is-rounded">
+          <button class=" subscribe-btn is-rounded">subscribe</button>
+        </div>
+      </div>
+      <div class="column is-4">
+        <ul class="footer-link">
+          <li class="has-text-white">REGISTER</li>
+          <li class="has-text-white">MEDIA</li>
+          <li class="has-text-white">TELEGRAM</li>
+        </ul>
+      </div>
+  </div>
+  <div class="footer-bottom ">
+    <p class="subtitle has-text-info mt-6 is-size-6">&copy;2021-2022 | Krypton. All Rights Reserved</p>
+  
+  <p class="subtitle has-text-white is-size-7">Designed and Coded by Rahaf</p>
+  </div>
+      </div>
+    </div>
+  </footer>
+  <script src="index.js"></script>
+     <!-- navbar js toggle script  start-->
+     <script>
+      document.addEventListener('DOMContentLoaded', () => {
+  
+        // Get all "navbar-burger" elements
+        const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+  
+        // Add a click event on each of them
+        $navbarBurgers.forEach(el => {
+          el.addEventListener('click', () => {
+  
+            // Get the target from the "data-target" attribute
+            const target = el.dataset.target;
+            const $target = document.getElementById(target);
+  
+            // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+            el.classList.toggle('is-active');
+            $target.classList.toggle('is-active');
+  
+          });
+        });
+  
+      });
+
+  
+// // Set the date we're counting down to
+// var countDownDate = new Date("Jan 5  , 2024 15:37:25").getTime();
+
+// // Update the count down every 1 second
+// var x = setInterval(function() {
+
+//   // Get today's date and time
+//   var now = new Date().getTime();
+
+//   // Find the distance between now and the count down date
+//   var distance = countDownDate - now;
+
+//   // Time calculations for days, hours, minutes and seconds
+//   var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+//   var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+//   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+//   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+//   // Display the result in the element with id="demo"
+//   document.getElementById("demo").innerHTML = days + "   "+ "   "+"Days " + hours +"h "
+//  + minutes  +"m " +" "+ seconds + "s ";
+
+//   // If the count down is finished, write some text
+//   if (distance < 0) {
+//     clearInterval(x);
+//     document.getElementById("demo").innerHTML = "EXPIRED";
+//   }
+// }, 1000);
+
+ 
+      // Set the date we're counting down to
+      var countDownDate = new Date("Oct 24, 2023 07:00:00").getTime();
+
+      // Update the count down every 1 second
+      var x = setInterval(function () {
+        // Get todays date and time
+        var now = new Date().getTime();
+        // Find the distance between now and the count down date
+        var distance = countDownDate - now;
+        var d = document;
+        var daysElement = d.querySelector("#days-count");
+        var hoursElement = d.querySelector("#hours-count");
+        var minutesElement = d.querySelector("#minutes-count");
+        var secondsElement = d.querySelector("#seconds-count");
+        // Time calculations for days, hours, minutes and seconds
+        daysElement.textContent = Math.floor(distance / (1000 * 60 * 60 * 24));
+        hoursElement.textContent = Math.floor(
+          (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        );
+        minutesElement.textContent = Math.floor(
+          (distance % (1000 * 60 * 60)) / (1000 * 60)
+        );
+        secondsElement.textContent = Math.floor(
+          (distance % (1000 * 60)) / 1000
+        );
+        // If the count down is finished, write some text
+        if (distance < 0) {
+          clearInterval(x);
+        }
+      }, 1000);
+    </script>
+    <!-- navbar js toggle script end-->
+  <script src="particles.js"type="text/javascipt"></script>
+  <script src="app.js"type="text/javascipt"></script>
+    <!-- navbar js toggle script  start-->
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        // Get all "navbar-burger" elements
+        const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+        // Add a click event on each of them
+        $navbarBurgers.forEach(el => {
+          el.addEventListener('click', () => {
+            // Get the target from the "data-target" attribute
+            const target = el.dataset.target;
+            const $target = document.getElementById(target);
+            // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+            el.classList.toggle('is-active');
+            $target.classList.toggle('is-active');
+          });
+        });
+      });
+    </script>
+  </body>
+  </html>
