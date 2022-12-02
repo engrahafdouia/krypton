@@ -1,2 +1,2 @@
-# krypton
-demo: https://engrahafdouia.github.io/krypton/
+#  krypton_demo: https://engrahafdouia.github.io/krypton/
+
