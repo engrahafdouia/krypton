@@ -84,37 +84,46 @@
      <p class=" subtitle is-6 has-text-white has-text-centered is-compact">
        Viderer malorum sadipscing cum ei. Eu impetus perfecto sit, no sea labore detraxit. Primis mediocrem necessitatibus an vis. Ut sea pertinax perpetua, eruditi volumus quaestio ex mel, has ei tota homero.
     </p>
-    <div class="columns ">
+    <div class="columns is-centered ">
         <div class="column is-9 ">
-          <div class="post is-darkest mt-2 p-6 ">
-            <a href="" class="is-centered">
-              <div class="image-post ">
-              <img src="./img/post1.svg" alt="">
+          <div class="container-post">
+            <template id="post-template">
+              <div class="post is-darkest mt-2 p-6 ">
+                <a href="" class="">
+                  <div class="columns">
+                    <div class="column is-3">
+                      <div class="image-post ">
+                      <img src="./img/post1.svg" alt="">
+                      </div>
+                    </div>
+                    <div class="content-post ml-5">
+                                    <div class="post-title has-text-light is-size-6 mt-5">
+                    POST_TITLE
+                    <span class="date-post is-size-7">15.04.2021</span>
+                                    </div>
+                                    <p class="subtitle has-text-info is-size-6 mt-1">
+                    POST_BODY
+                    </p>
+                    <div class="post-foot is-flex ">
+                      <img src="./img/team/joshua.jpg"width="30px" alt="">
+                      <div class="author-name ml-3 is-size-7 is-vcentered has-text-white mt-2">by Sandra Bernard</div>
+                      <div class="comments is-flex">
+                        <div class="likes">
+                          <i class="fa fa-heart"></i>
+                          <span class="has-text-white">4</span></div>
+                        <div class="comment ml-4">
+                          <i class="fa fa-cloud"></i>
+                          <span class="myspan has-text-white ">4</span></div>
+                      </div>
+                    </div>
+                    </div>
+                  </div>
+                </a>
               </div>
-              <div class="content-post ml-5">
-            <div class="post-title has-text-light is-size-6 mt-5">
-              The Krypton chain algoryth
-              <span class="date-post is-size-7">15.04.2021</span>
-            </div>
-            <p class="subtitle has-text-info is-size-6 mt-1">
-        
-              Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. Lorem Ipsum, adı bilinmeyen bir matbaacının bir hurufat numune kitabı...
-              </p>
-              <div class="post-foot is-flex ">
-                <img src="./img/team/joshua.jpg"width="30px" alt="">
-                <div class="author-name ml-3 is-size-7 is-vcentered has-text-white mt-2">by Sandra Bernard</div>
-                <div class="comments is-flex">
-                  <div class="likes">
-                    <i class="fa fa-heart"></i>
-                    <span class="has-text-white">4</span></div>
-                  <div class="comment ml-4">
-                    <i class="fa fa-cloud"></i>
-                    <span class="myspan has-text-white ">4</span></div>
-                </div>
-              </div>
-              </div>
-            </a>
+            </template>
           </div>
+         
+          <!-- 
           <div class="post is-darkest mt-2 p-6 ">
             <a href="" class="is-flex flex-end">
               <div class="image-post ">
@@ -172,7 +181,8 @@
               </div>
               </div>
             </a>
-          </div>
+          </div> -->
+      
           <div class="buttons is-centered">
             <div class="button  border-none is-uppercase  has-text-white is-size-7 py-5 px-5 mt-6 is-medium has-gradient">More Articles</div>
           </div>
@@ -402,5 +412,24 @@
            });
         });        
      </script>
+     <script >
+    const template = document.querySelector('#post-template')
+const container = document.querySelector('.container-post')
+fetch('https://jsonplaceholder.typicode.com/posts')
+.then(function (response) {
+  return response.json()
+})
+.then(function (posts) {
+  // for (let i = 0; i < posts.length; i++) {
+  //   const post = posts[i]
+  //   container.innerHTML += template.innerHTML.replaceAll('POST_TITLE', post.title).replaceAll('POST_BODY', post.body)
+  // }
+
+  for (const post of posts) {
+    container.innerHTML += template.innerHTML.replaceAll('POST_TITLE', post.title).replaceAll('POST_BODY', post.body)
+  }
+})
+
+    </script>
   </body>
   </html>
