@@ -1927,3 +1927,136 @@ textarea{
         margin-left: 45px;
     }
    
+    @media screen and (max-width: 768px) {
+        .landing-caption {
+          text-align: center;
+          margin-bottom: 2rem;
+        }
+      
+        .inputText, .inputText1, textarea {
+          width: 100% !important;
+        }
+      
+        .navbar-menu {
+          background-color: #111; /* أو حسب التصميم */
+        }
+      }
+
+      .ico-countdown {
+        width: 100%;
+        max-width: 100%;
+        text-align: center;
+      }
+      
+      .count-init ul {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        padding: 0;
+        list-style: none;
+      }
+      
+      .count-init li {
+        margin: 1rem;
+        min-width: 80px;
+        flex: 1 1 100px;
+      }
+      
+      /* لجعل الكاونت داون متجاوب */
+.count-init ul {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  
+  .count-init li {
+    text-align: center;
+    margin: 1rem;
+    min-width: 70px;
+    flex: 1 1 100px;
+  }
+  
+  .timer-number {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+  }
+  
+  .label {
+    font-size: 0.9rem;
+    color: #ccc;
+  }
+  
+  /* تأكد أن الحاوية لا تسبب scroll */
+  .ico-countdown {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+  
+  /* ضمان تناسق البطن */
+  .counter {
+    width: 100%;
+  }
+  
+  /* للأزرار */
+  .buttons .button {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  @media (max-width: 768px) {
+    .timer-number {
+      font-size: 1.5rem;
+    }
+    .count-init li {
+      flex: 1 1 40%;
+    }
+  }
+  /* الكاونت داون في صف أفقي */
+.count-init ul {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0 auto;
+    list-style: none;
+    max-width: 600px; /* حد أقصى للعرض */
+    gap: 1rem;
+  }
+  
+  .count-init li {
+    flex: 1 1 100px;
+    text-align: center;
+    background: rgba(255,255,255,0.05); /* لمسة خفيفة */
+    border-radius: 8px;
+    padding: 10px;
+  }
+  
+  .timer-number {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+  }
+  
+  .label {
+    font-size: 0.9rem;
+    color: #ccc;
+  }
+  
+  /* responsive للموبايل */
+  @media (max-width: 480px) {
+    .count-init ul {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .count-init li {
+      width: 80%;
+    }
+  }
+  
+  

@@ -11,8 +11,11 @@
     <title>Krypton project</title>
 </head>
 <body>
+  <div class='pre-loader'>
+    <img class='loading-gif' alt='loading' src="./img/wating.gif"/>
+   </div>
   <!-- Start navbar -->
- <nav class="navbar is-darkest "id="navbar1" role="navigation" aria-label="main navigation">
+  <nav class="navbar is-darkest "id="navbar1" role="navigation" aria-label="main navigation">
     <div class="container">
       <div class="navbar-brand">
         <a class="navbar-item" href="https://bulma.io">
@@ -36,7 +39,7 @@
           <a class="navbar-item has-text-white is-size-7" href="ico.html">
             ICO
           </a>
-          <a class="navbar-item has-text-white is-size-7" href="#roadmap">
+          <a class="navbar-item has-text-white is-size-7" href="roadmap.html">
             ROADMAP
           </a>
           <a class="navbar-item has-text-white is-size-7" href="blog.html">
@@ -487,6 +490,27 @@
         </div>
       </footer>
   <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Get all "navbar-burger" elements
+      const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+      // Add a click event on each of them
+      $navbarBurgers.forEach(el => {
+        el.addEventListener('click', () => {
+          // Get the target from the "data-target" attribute
+          const target = el.dataset.target;
+          const $target = document.getElementById(target);
+          // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+          el.classList.toggle('is-active');
+          $target.classList.toggle('is-active');
+        });
+      });
+    });
+  
+  </script>
+   <script> 
+   window.addEventListener('load', function () {
+    document.querySelector('.pre-loader').className += ' hidden';
+});
     document.addEventListener('DOMContentLoaded', () => {
       // Get all "navbar-burger" elements
       const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
    <link rel="stylesheet" href="style.css">
    <link rel="stylesheet" href="./bulma/css/bulma.min.css">
    <link rel="icon" type="image/png" href="./img/krypton-gradient.svg">
@@ -12,7 +13,9 @@
     <title>Krypton project</title>
 </head>
 <body>
-     
+  <div class='pre-loader'>
+    <img class='loading-gif' alt='loading' src="./img/wating.gif"/>
+   </div>
   <!-- Start navbar -->
   <nav class="navbar is-darkest "id="navbar1" role="navigation" aria-label="main navigation">
     <div class="container">
@@ -29,6 +32,9 @@
       </div>
       <div id="navbarBasicExample" class="navbar-menu">
         <div class="navbar-end">
+          <a class="navbar-item has-text-white is-size-7" href="index.html">
+            HOME
+          </a>
           <a class="navbar-item has-text-white is-size-7" href="token.html">
             TOKEN
           </a>
@@ -62,8 +68,8 @@
   <section class="section  is-darkest is-vcentered is-medium ">
   
   <div class="container is-centered">
-    <div class="columns is-vcentered">
-          <div class="column is-5 landing-caption"> 
+    <div class="columns is-vcentered is-multiline">
+          <div class="column is-6-desktop is-12-tablet landing-caption"> 
           <h1 class="title is-size-3 has-text-white"> Login to ICO</h1>
 
             <form class="form">
@@ -89,10 +95,10 @@
        
           </div> 
   
-        <div class="column is-5 is-offset-1 ico-countdown">
-          <div class="counter has-gradient p-6">
-              <!-- <div x-data="initCountdown()" x-init="setupCountdown()" class="ico-card animated preFadeInUp fadeInUp"> -->
-                <div class="count-init">
+        <div class="column is-6-desktop is-12-tablet ico-countdown">
+          <div  class="counter has-gradient p-5 is-flex is-flex-direction-column is-align-items-center is-justify-content-center">
+            <!-- <div x-data="initCountdown()" x-init="setupCountdown()" class="ico-card animated preFadeInUp fadeInUp"> -->
+                <div class="count-init" style="width:100%">
                 <!-- Countdown -->
                   <ul id="countdown" class="is-ico">
                       <li id="days">
@@ -205,34 +211,6 @@
       });
 
   
-// // Set the date we're counting down to
-// var countDownDate = new Date("Jan 5  , 2024 15:37:25").getTime();
-
-// // Update the count down every 1 second
-// var x = setInterval(function() {
-
-//   // Get today's date and time
-//   var now = new Date().getTime();
-
-//   // Find the distance between now and the count down date
-//   var distance = countDownDate - now;
-
-//   // Time calculations for days, hours, minutes and seconds
-//   var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-//   var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-//   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-//   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-//   // Display the result in the element with id="demo"
-//   document.getElementById("demo").innerHTML = days + "   "+ "   "+"Days " + hours +"h "
-//  + minutes  +"m " +" "+ seconds + "s ";
-
-//   // If the count down is finished, write some text
-//   if (distance < 0) {
-//     clearInterval(x);
-//     document.getElementById("demo").innerHTML = "EXPIRED";
-//   }
-// }, 1000);
 
  
       // Set the date we're counting down to
@@ -271,6 +249,9 @@
   <script src="app.js"type="text/javascipt"></script>
     <!-- navbar js toggle script  start-->
     <script>
+       window.addEventListener('load', function () {
+      document.querySelector('.pre-loader').className += ' hidden';
+  });
       document.addEventListener('DOMContentLoaded', () => {
         // Get all "navbar-burger" elements
         const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
@@ -286,6 +267,9 @@
           });
         });
       });
-    </script>
+   
+   </script>
+    <script src="main.js"></script>
+
   </body>
   </html>
